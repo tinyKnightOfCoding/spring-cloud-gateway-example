@@ -10,6 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dummy-service</artifactId>
+    <properties>
+        <spring-boot.version>2.1.9.RELEASE</spring-boot.version>
+    </properties>
 
     <dependencies>
         <dependency>

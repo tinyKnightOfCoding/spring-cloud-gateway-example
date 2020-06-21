@@ -21,8 +21,8 @@ class SecurityConfig {
     fun myFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain =
         http
             .authorizeExchange()
-            .pathMatchers("/admin/**").authenticated()
             .pathMatchers("/guest/**").permitAll()
+            .pathMatchers("/admin/**").authenticated()
             .anyExchange().denyAll()
             .and()
             .build()
