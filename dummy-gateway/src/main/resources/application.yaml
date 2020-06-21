@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: admin
+          uri: http://localhost:8080
+          predicates:
+            - Path=/admin/**
+        - id: guest
+          uri: http://localhost:8080
+          predicates:
+            - Path=/guest/**
+
+logging:
+  level:
+    org.springframework: DEBUG
